@@ -8,7 +8,3 @@
 - name: Configure tomcat
   include: configure.yml
   when: tomcat_state == "present"
-
-- name: Uninstall tomcat
-  include: uninstall.yml
-  when: tomcat_state == "absent"
