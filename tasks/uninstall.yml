@@ -33,7 +33,7 @@
     path: "{{ tomcat_install_path }}/{{ tomcat_service_name }}"
     state: absent
 
-- name: (uninstall) Create backup archive before deletion at {{ tomcat_install_path }}/tomcat-backup-XXX.tgz
+- name: "(uninstall) Create backup archive before deletion at {{ tomcat_install_path }}/tomcat-backup-XXX.tgz"
   community.general.archive:
     path: "{{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}"
     dest: "{{ tomcat_install_path }}/tomcat-backup-{{ lookup('pipe','date +%Y%m%d%H%M%S') }}.tgz"
